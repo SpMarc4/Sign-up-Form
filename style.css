@@ -1,28 +1,155 @@
+@font-face {
+    font-family: 'Amonajaku';
+    src: url(fonts/norse-font/Amanojaku.woff2)
+}
+
 body, html {
+    width: 100%;
     height: 100%;
+    font-family: 'sans-serif', 'Roboto', 'Gil Sans', 'Helvetica', 'Verdana';
 }
 div.body-block {
     height: 100%;
     display: flex;
     flex-direction: row;
-    /*flex-direction: row;*/
 }
 
 div.left-side {
-    flex: 1;
+    /* flex: 1; */
     display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     border: 10px solid red;
+    width: 33%;
+    background-image: url("images/japan-street.jpg");
+    background-size: cover;
+    justify-content: space-around;
+    min-width: 15vh;
+    min-height: 20vh;
+
 }
 
 div.right-side {
-    flex: 2;
-    box-sizing: border-box;
+    flex: 1;
     border: 10px solid blue;
+    background-color: rgba(240, 240, 240, 0.507);
 }
 
-.body-block .left-side .background-image {
-    flex: 1;
+
+
+div.right-side .upper-content,
+div.right-side .footer-block {
+    padding: 0 10px 0 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.background-logo {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.288);
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.samurai-logo {
+    width: 15vh;
+    height: 15vh;
     object-fit: cover;
-    border: 10px yellow solid;
+    margin: 0;
+}
+
+.samurai-title {
+    font-family: 'Amonajaku';
+    font-size: 28px;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.background-footer {
+    display: flex;
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+.background-footer footer{
+    color: white;
+    margin: auto;
+    box-shadow: black;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 70px;
+}
+
+.background-footer footer a{
+    color: white;
+}
+
+
+.form-block form fieldset{
+    background-color: white;
+    margin: 0;
+    padding-top: 30px;
+    border: none;
+    box-shadow: 0 10px 10px -10px;
+}
+
+input, label {
+    display: block;
+}
+
+
+.input-block {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+.input-element {
+    flex-basis: 50%;
+    margin: 10px 0 10px 0;
+}
+
+
+.input-element label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.form-block form fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-block form fieldset legend {
+    position: relative;
+    top: 25px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.form-block form button {
+    font-size: 16px;
+    font-weight: 800;
+    color: white;
+    background-color: rgb(117, 94, 138);
+    border: 2px rgb(117, 94, 138) solid;
+    padding: 12px 40px;
+    border-radius: 6px;
+    margin: 30px 0 0 32px;
+}
+
+div.right-side .footer-block a{
+    color: rgb(117, 94, 138);
+    font-weight: 600;
 }
