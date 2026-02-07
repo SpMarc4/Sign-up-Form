@@ -108,13 +108,18 @@ input, label {
 
 .input-block {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 20px;
 }
 
+.sibling-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
 
 .input-element {
-    flex-basis: 50%;
     margin: 10px 0 10px 0;
 }
 
