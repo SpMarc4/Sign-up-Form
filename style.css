@@ -25,7 +25,6 @@ div.body-block {
 }
 
 div.left-side {
-    /* flex: 1; */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -178,7 +177,7 @@ div.right-side .footer-block a{
 
 .input-element input:focus {
     outline: none;
-    border: 1px solid var(--third-color);
+    border: 1px solid var(--primary-color);
 }
 
 .input-element:focus-within label::after {
@@ -191,15 +190,6 @@ div.right-side .footer-block a{
     font-weight: bold;
 }
 
-.input-element:focus-within:valid label::after {
-    content: '\22EF';
-    position: relative;
-    right: -5px;
-    background-color: var(--primary-color);
-    border-radius: 2px;
-    color: var(--third-color);
-    font-weight: bold;
-}
 
 .input-element input[type=password]:user-invalid,
 .input-element input[type=email]:user-invalid
