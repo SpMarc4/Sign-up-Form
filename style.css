@@ -3,6 +3,16 @@
     src: url(fonts/norse-font/Amanojaku.woff2)
 }
 
+:root {
+    --primary-color: rgb(117, 94, 138);
+    --secondary-color: rgba(240, 240, 240, 0.507);
+    --third-color: white;
+    --error-color: rgb(241, 57, 44);
+    --success-color: rgb(91, 207, 37);
+    --background-color: rgba(0, 0, 0, 0.322);
+    --neutral-border: #c9cbcf;
+}
+
 body, html {
     width: 100%;
     height: 100%;
@@ -19,7 +29,6 @@ div.left-side {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    border: 10px solid red;
     width: 33%;
     background-image: url("images/japan-street.jpg");
     background-size: cover;
@@ -31,8 +40,7 @@ div.left-side {
 
 div.right-side {
     flex: 1;
-    border: 10px solid blue;
-    background-color: rgba(240, 240, 240, 0.507);
+    background-color: var(--neutral-color);
 }
 
 
@@ -47,7 +55,7 @@ div.right-side .footer-block {
 .background-logo {
     display: flex;
     flex-wrap: wrap;
-    background: rgba(0, 0, 0, 0.288);
+    background: var(--background-color);
     margin-top: auto;
     margin-bottom: auto;
     align-items: center;
@@ -64,7 +72,7 @@ div.right-side .footer-block {
 .samurai-title {
     font-family: 'Amonajaku';
     font-size: 28px;
-    color: white;
+    color: var(--third-color);
     margin: 0;
     text-align: center;
 }
@@ -76,9 +84,12 @@ div.right-side .footer-block {
 }
 
 .background-footer footer{
-    color: white;
+    color: var(--third-color);
     margin: auto;
-    box-shadow: black;
+}
+
+.background-footer footer a{
+    color: var(--third-color);
 }
 
 .right-side {
@@ -88,13 +99,8 @@ div.right-side .footer-block {
     gap: 70px;
 }
 
-.background-footer footer a{
-    color: white;
-}
-
-
 .form-block form fieldset{
-    background-color: white;
+    background-color: var(--third-color);
     margin: 0;
     padding-top: 30px;
     border: none;
@@ -121,6 +127,7 @@ input, label {
 
 .input-element {
     margin: 10px 0 10px 0;
+    box-shadow: 0 2px 2px -2px;
 }
 
 
@@ -148,21 +155,21 @@ input, label {
 .form-block form button {
     font-size: 16px;
     font-weight: 800;
-    color: white;
-    background-color: rgb(117, 94, 138);
-    border: 2px rgb(117, 94, 138) solid;
+    color: var(--third-color);
+    background-color: var(--primary-color);
+    border: 2px var(--third-color) solid;
     padding: 12px 40px;
     border-radius: 6px;
     margin: 30px 0 0 32px;
 }
 
 div.right-side .footer-block a{
-    color: rgb(117, 94, 138);
+    color: var(--primary-color);
     font-weight: 600;
 }
 
 .input-element input {
-    border: 1px solid #c9cbcf;
+    border: 1px solid var(--neutral-border);
 }
 
 .input-element label {
@@ -171,16 +178,16 @@ div.right-side .footer-block a{
 
 .input-element input:focus {
     outline: none;
-    border: 1px solid rgb(117, 94, 138);
+    border: 1px solid var(--third-color);
 }
 
 .input-element:focus-within label::after {
     content: '\22EF';
     position: relative;
     right: -5px;
-    background-color: rgb(117, 94, 138);
+    background-color: var(--primary-color);
     border-radius: 2px;
-    color: white;
+    color: var(--third-color);
     font-weight: bold;
 }
 
@@ -188,9 +195,9 @@ div.right-side .footer-block a{
     content: '\22EF';
     position: relative;
     right: -5px;
-    background-color: rgb(117, 94, 138);
+    background-color: var(--primary-color);
     border-radius: 2px;
-    color: white;
+    color: var(--third-color);
     font-weight: bold;
 }
 
@@ -198,7 +205,7 @@ div.right-side .footer-block a{
 .input-element input[type=email]:user-invalid
 {
     outline: none;
-    border: 1px solid rgb(255, 30, 0);
+    border: 1px solid var(--error-color);
 }
 
 .input-element label:has(+ input[type=password]:user-invalid)::after,
@@ -206,9 +213,9 @@ div.right-side .footer-block a{
     content: '\2716';
     position: relative;
     right: -5px;
-    background-color: rgb(241, 57, 44);
+    background-color: var(--error-color);
     border-radius: 2px;
-    color: white;
+    color: var(--third-color);
     font-weight: bold;
 }
 
@@ -216,8 +223,12 @@ div.right-side .footer-block a{
     content: '\2714';
     position: relative;
     right: -5px;
-    background-color: rgb(91, 207, 37);
+    background-color: var(--success-color);
     border-radius: 2px;
-    color: white;
+    color: var(--third-color);
     font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
 }
