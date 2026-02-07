@@ -123,6 +123,8 @@ input, label {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 10px;
     font-weight: 400;
+    position: relative;
+    top: -2px;
 }
 
 .form-block form fieldset {
@@ -152,4 +154,65 @@ input, label {
 div.right-side .footer-block a{
     color: rgb(117, 94, 138);
     font-weight: 600;
+}
+
+.input-element input {
+    border: 1px solid #c9cbcf;
+}
+
+.input-element label {
+    height: 12px;
+}
+
+.input-element input:focus {
+    outline: none;
+    border: 1px solid rgb(117, 94, 138);
+}
+
+.input-element:focus-within label::after {
+    content: '\22EF';
+    position: relative;
+    right: -5px;
+    background-color: rgb(117, 94, 138);
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+}
+
+.input-element:focus-within:valid label::after {
+    content: '\22EF';
+    position: relative;
+    right: -5px;
+    background-color: rgb(117, 94, 138);
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+}
+
+.input-element input[type=password]:user-invalid,
+.input-element input[type=email]:user-invalid
+{
+    outline: none;
+    border: 1px solid rgb(255, 30, 0);
+}
+
+.input-element label:has(+ input[type=password]:user-invalid)::after,
+.input-element label:has(+ input[type=email]:user-invalid)::after{
+    content: '\2716';
+    position: relative;
+    right: -5px;
+    background-color: rgb(241, 57, 44);
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+}
+
+.input-element label:has(+ input:user-valid)::after{
+    content: '\2714';
+    position: relative;
+    right: -5px;
+    background-color: rgb(91, 207, 37);
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
 }

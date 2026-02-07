@@ -36,28 +36,49 @@
                             <legend>Let's do this!</legend>
                             <div class="input-block">
                                 <div class="input-element">
-                                    <label for="first-name">FIRST NAME</label>
-                                    <input type="text" id="first-name" name="first-name">
+                                    <label for="first-name">FIRST NAME *</label>
+                                    <input type="text" id="first-name" name="first-name" required>
                                 </div>
                                 <div class="input-element">
-                                    <label for="last-name">LAST NAME</label>
-                                    <input type="text" id="last-name" name="last-name">
+                                    <label for="last-name">LAST NAME *</label>
+                                    <input type="text" id="last-name" name="last-name" required>
                                 </div>
                                 <div class="input-element">
-                                    <label for="user-mail">EMAIL</label>
-                                    <input type="email" id="user-mail" name="user-mail">
+                                    <label for="user-mail">EMAIL *</label>
+                                    <input type="email" id="user-mail" name="user-mail"
+                                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$" required>
                                 </div>
                                 <div class="input-element">
                                     <label for="phone-number">PHONE NUMBER</label>
-                                    <input type="number" id="phone-number" name="phone-number">
+                                    <input type="text" inputmode="numeric" id="phone-number" name="phone-number" >
                                 </div>
                                 <div class="input-element">
-                                    <label for="password">PASSWORD</label>
-                                    <input type="password" id="password" name="password">
+                                    <label for="password">PASSWORD *</label>
+                                    <input type="password" id="password" name="password"
+                                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+\-]).{8,}$"
+                                    title = "
+                                    It must contain.&#013
+                                    - A lowercase character.&#013
+                                    - An uppercase character.&#013
+                                    - A number.&#013
+                                    - An special character.&#013
+                                    - 8 character length."
+                                    required
+                                    >
                                 </div>
                                 <div class="input-element">
-                                    <label for="c-password">CONFIRM PASSWORD</label>
-                                    <input type="password" id="c-password" name="c-password">
+                                    <label for="c-password">CONFIRM PASSWORD *</label>
+                                    <input type="password" id="c-password" name="c-password"
+                                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+\-]).{8,}$"
+                                    title = "
+                                    It must contain:&#013
+                                    - A lowercase character.&#013
+                                    - An uppercase character.&#013
+                                    - A number.&#013
+                                    - An special character.&#013
+                                    - 8 character length."
+                                    required
+                                    >
                                 </div>
                             </div>
                         </fieldset>
